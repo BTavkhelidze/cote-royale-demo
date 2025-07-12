@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 function DefiningLuxury() {
   useGSAP(() => {
     const paragraphSL = new SplitText('#DParagraph', {
-      type: 'chars',
+      type: 'chars, words, lines',
     });
 
     const tl = gsap.timeline({
@@ -24,6 +24,7 @@ function DefiningLuxury() {
 
     tl.to('#blurDiv', {
       backdropFilter: 'blur(0px)',
+      ease: 'none',
     });
 
     const titleTL = gsap.timeline({
@@ -40,9 +41,9 @@ function DefiningLuxury() {
     titleTL.to(paragraphSL.chars, {
       color: 'white',
       stagger: 0.2,
+      duration: 1,
     });
   });
-
   return (
     <section className='relative h-screen ' id='definingSection'>
       <div
@@ -53,7 +54,7 @@ function DefiningLuxury() {
         <p>Defining Luxury</p>
         <div>
           <p
-            className='text-3xl sm:text-5xl md:text-7xl text-center leading-tight text-[#2e3138]'
+            className='text-3xl  sm:text-5xl md:text-7xl text-center text-balance leading-tight text-[#2e3138]'
             id='DParagraph'
           >
             Côte Royale is designed for the man who commands attention without

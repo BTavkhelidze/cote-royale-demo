@@ -25,7 +25,7 @@ function HeaderSection() {
         <Image
           src={LogoSVG}
           alt='logo'
-          className='object-contain w-[200px] h-[50px] cursor-pointer logo scale-[0.80]'
+          className='object-contain w-[200px] h-[50px] cursor-pointer logo scale-[0.75]'
         />
         <div className='flex gap-10 '>
           <Image src={SearchSVG} alt='search icon' className='cursor-pointer' />

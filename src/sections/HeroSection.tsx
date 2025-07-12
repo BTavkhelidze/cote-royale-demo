@@ -38,7 +38,7 @@ function HeroSection() {
       .from(
         '.paragraphHero',
         {
-          y: 100,
+          y: 20,
           opacity: 0,
           duration: 1,
         },
@@ -47,7 +47,7 @@ function HeroSection() {
       .from(
         '.btnHero',
         {
-          yPercent: 100,
+          yPercent: 20,
           opacity: 0,
           duration: 1,
         },
@@ -62,14 +62,17 @@ function HeroSection() {
           src={HeroImg}
           alt='bg-hero'
           fill
-          className='object-cover scale-[1.4]'
+          className='object-cover scale-[1.5]'
         />
       </div>
       <div className='absolute top-0 left-0 w-full h-full -z-1 bg-[#00000080]'></div>
       <div className=' flex items-center justify-center w-full h-full'>
         <div className='card1150'>
           <div className='max-w-[576px] w-full flex flex-col gap-6 items-start'>
-            <h2 className=' first-title'>Effortless Elegance</h2>
+            <h2 className=' first-title overflow-hidden'>
+              Effortless Elegance
+            </h2>
+            <div></div>
             <p className='text-lg text-[#fff] paragraphHero'>
               An expression of quiet luxury, Côte Royale is designed for the man
               who commands attention without seeking it. A reflection of
