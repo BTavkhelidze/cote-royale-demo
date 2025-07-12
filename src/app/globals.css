@@ -33,4 +33,8 @@ body {
   .bgHover {
     @apply hover:bg-[#333333] duration-400;
   }
+
+  .first-title {
+    @apply xl:text-8xl md:text-6xl  sm:text-5xl text-3xl font-light text-white pb-3;
+  }
 }

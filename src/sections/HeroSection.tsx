@@ -1,25 +1,81 @@
+'use client';
 import Image from 'next/image';
 import React from 'react';
 import { HeroImg } from '../../public';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
+import { SplitText } from 'gsap/SplitText';
+
+gsap.registerPlugin(SplitText);
 
 function HeroSection() {
+  useGSAP(() => {
+    const titleSL = new SplitText('.first-title', {
+      type: 'words',
+    });
+    const tl = gsap.timeline();
+    tl.to('.heroMain', {
+      opacity: 1,
+      duration: 1,
+    }).to(
+      '#bg-hero',
+      {
+        scale: 1,
+        duration: 3,
+      },
+      '<'
+    );
+
+    const textTl = gsap.timeline();
+    textTl
+      .from(titleSL.words, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+      })
+      .from(
+        '.paragraphHero',
+        {
+          y: 100,
+          opacity: 0,
+          duration: 1,
+        },
+        '-=0.3'
+      )
+      .from(
+        '.btnHero',
+        {
+          yPercent: 100,
+          opacity: 0,
+          duration: 1,
+        },
+        '-=0.3'
+      );
+  }, []);
   return (
-    <section className='relative  h-[110vh]  '>
-      <div className='absolute w-full h-full -z-1 '>
-        <Image src={HeroImg} alt='bg-hero' fill className='object-cover' />
+    <section className='relative  h-[110vh] heroMain overflow-hidden opacity-0'>
+      <div className='absolute w-full h-full -z-2 '>
+        <Image
+          id='bg-hero'
+          src={HeroImg}
+          alt='bg-hero'
+          fill
+          className='object-cover scale-[1.4]'
+        />
       </div>
-      <div className='bg-[#00000080] flex items-center justify-center w-full h-full'>
+      <div className='absolute top-0 left-0 w-full h-full -z-1 bg-[#00000080]'></div>
+      <div className=' flex items-center justify-center w-full h-full'>
         <div className='card1150'>
           <div className='max-w-[576px] w-full flex flex-col gap-6 items-start'>
-            <h2 className='xl:text-8xl md:text-6xl sm:text-5xl text-3xl font-bold text-white pb-3'>
-              Effortless Elegance
-            </h2>
-            <p className='text-lg text-[#fff]'>
+            <h2 className=' first-title'>Effortless Elegance</h2>
+            <p className='text-lg text-[#fff] paragraphHero'>
               An expression of quiet luxury, Côte Royale is designed for the man
               who commands attention without seeking it. A reflection of
               nature’s raw beauty.
             </p>
-            <button className='px-13 py-4 border-white border-2 bg-transparent cursor-pointer hover:bg-[#7D7D7D] duration-400'>
+            <button className='btnHero px-13 py-4 border-white border-2 bg-transparent cursor-pointer hover:bg-[#7D7D7D] '>
               SHOP NOW
             </button>
           </div>
