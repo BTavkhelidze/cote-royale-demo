@@ -59,7 +59,6 @@ function PowerfulSimplisitySection() {
       scrollTrigger: {
         trigger: '#powerful-simplisity-section',
         start: 'top 42%',
-        markers: true,
       },
     });
   }, []);

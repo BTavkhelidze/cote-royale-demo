@@ -51,7 +51,7 @@ function DefiningLuxury() {
         <p className='uppercase'>Defining Luxury</p>
         <div>
           <p
-            className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center text-balance leading-tight text-[#2e3138] uppercase'
+            className=' text-center text-balance leading-tight text-[#2e3138] uppercase'
             id='DParagraph'
           >
             Côte Royale is designed for the man who commands attention without
