@@ -27,7 +27,7 @@ body {
 
 @layer components {
   .card1150 {
-    @apply max-w-[1150px] w-full mx-auto px-[1%];
+    @apply max-w-[1150px] w-full mx-auto md:px-[1%] px-[2%];
   }
 
   .bgHover {

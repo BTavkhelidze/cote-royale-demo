@@ -18,7 +18,7 @@ function HeaderSection() {
 
   return (
     <header>
-      <div className='fixed z-10 top-0 left-0 flex justify-between px-[1%] w-full  bg-[#000000] py-2 items-center'>
+      <div className='fixed z-10 top-0 left-0 flex justify-between px-[2%] md:px-[1%] w-full  bg-[#000000] py-2 items-center'>
         <div className='w-[42px] h-[42px] text-2xl text-white   flex items-center justify-center cursor-pointer bgHover'>
           <IoIosMenu />
         </div>

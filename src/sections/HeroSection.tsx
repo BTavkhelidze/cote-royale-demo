@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 import { SplitText } from 'gsap/SplitText';
+import Button from '@/components/Button';
 
 gsap.registerPlugin(SplitText);
 
@@ -45,7 +46,7 @@ function HeroSection() {
         '-=0.3'
       )
       .from(
-        '.btnHero',
+        '#btnHero',
         {
           yPercent: 20,
           opacity: 0,
@@ -78,9 +79,7 @@ function HeroSection() {
               who commands attention without seeking it. A reflection of
               nature’s raw beauty.
             </p>
-            <button className='btnHero px-13 py-4 border-white border-2 bg-transparent cursor-pointer hover:bg-[#7D7D7D] '>
-              SHOP NOW
-            </button>
+            <Button id='btnHero' />
           </div>
         </div>
       </div>
