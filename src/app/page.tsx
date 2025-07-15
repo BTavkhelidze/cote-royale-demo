@@ -15,7 +15,6 @@ export default function Home() {
       <OurFragrancesSection />
       <FragranceQuiz />
       <VideoSection />
-      <div className='w-full h-screen'></div>
     </main>
   );
 }
