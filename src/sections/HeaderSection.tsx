@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import { LogoSVG, ProfileSVG, SearchSVG, ShopSVG } from '../../public';
+import { LogoSVG, ShopSVG } from '../../public';
 import { IoIosMenu } from 'react-icons/io';
 
 import { gsap } from 'gsap';

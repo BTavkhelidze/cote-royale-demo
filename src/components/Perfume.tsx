@@ -23,7 +23,6 @@ const Perfume: React.FC<PerfumeI> = ({ perfume }) => {
       scrollTrigger: {
         trigger: `#${perfume.id}`,
         start: 'top 35%',
-        markers: true,
       },
     });
     gsap.from(`#content${perfume.id}`, {
@@ -33,7 +32,6 @@ const Perfume: React.FC<PerfumeI> = ({ perfume }) => {
       scrollTrigger: {
         trigger: `#${perfume.id}`,
         start: 'top 20%',
-        markers: true,
       },
     });
   }, []);

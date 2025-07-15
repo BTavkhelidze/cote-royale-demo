@@ -11,7 +11,10 @@ import Aqua1 from './aqua1.svg';
 import Aqua2 from './aqua2.svg';
 import Ignisi1 from './ignisi1.svg';
 import Ignisi2 from './ignisi2.svg';
+import QuizBg from './images/background.avif';
+
 export {
+  QuizBg,
   Ignisi2,
   Ignisi1,
   Aqua1,
