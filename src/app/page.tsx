@@ -3,6 +3,7 @@ import FragranceQuiz from '@/sections/FragranceQuiz';
 import HeroSection from '@/sections/HeroSection';
 import OurFragrancesSection from '@/sections/OurFragrancesSection';
 import PowerfulSimplisitySection from '@/sections/PowerfulSimplisitySection';
+import VideoSection from '@/sections/VideoSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <PowerfulSimplisitySection />
       <OurFragrancesSection />
       <FragranceQuiz />
+      <VideoSection />
       <div className='w-full h-screen'></div>
     </main>
   );

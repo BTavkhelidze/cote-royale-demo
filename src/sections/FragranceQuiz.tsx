@@ -44,7 +44,7 @@ function FragranceQuiz() {
     });
   });
   return (
-    <section id='FragrancesQuiz' className='relative py-[116px] '>
+    <section id='FragrancesQuiz' className='relative py-[116px]  '>
       <div className='card1150 flex flex-col items-center' id='scrollQuizdiv'>
         <p className='uppercase mb-8 '>Fragrance Quiz</p>
 
